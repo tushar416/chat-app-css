@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/* - Weights: 400, 500, 700 */
+
+:root {
+  --PaleViolet: hsl(276, 100%, 81%); /* (sub-heading at the top of the app UI)*/
+  --ModerateViolet: hsl(276, 55%, 52%); /* (chat on the left)*/
+  --DesaturatedDarkViolet: hsl(271, 15%, 43%); /*(chat on the right)*/
+  --GrayishBlue: hsl(206, 6%, 79%); /*(placeholder text) */
+  --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%); /*(main heading)*/
+  --DarkGrayishViolet: hsl(270, 7%, 64%); /*(paragraph)*/
+
+  /* 
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+*/
+  --LightMagenta: hsl(293, 100%, 63%);
+  --LightViolet: hsl(264, 100%, 61%);
+
+  --White: hsl(0, 0%, 100%);
+  --LightGrayishViolet: hsl(270, 20%, 96%); /*(app background)*/
+  --VeryDarkDesaturatedViolet: hsl(
+    271,
+    36%,
+    24%
+  ); /*(submit button background)*/
+  --VeryLightMagenta: hsl(289, 100%, 72%); /* (radio button outline) */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--LightGrayishViolet);
+}
+h1 {
+  color: var(--VeryDarkDesaturatedViolet);
+  font-weight: 500;
+}
+p {
+  color: var(--DarkGrayishViolet);
+}
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 450px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
+  line-height: 1.5;
+}
+/* mobile */
+.mobile {
+  height: 650px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1rem solid var(--White);
+  background: var(--LightGrayishViolet);
+}
+
+.mobile p {
+  font-size: 13px;
+}
+/* head */
+.head {
+  display: flex;
+  height: 90px;
+  background-image: linear-gradient(
+    to right,
+    var(--LightViolet),
+    var(--LightMagenta)
+  );
+  color: var(--White);
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+.head::before {
+  content: "";
+  height: 35px;
+  background-color: var(--White);
+  width: 150px;
+  position: absolute;
+  top: -15px;
+  left: 85px;
+  border-radius: 15px;
+}
+.head p {
+  color: var(--PaleViolet);
+}
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 1rem;
+}
+.fa-chevron-left {
+  margin: 0.5rem;
+}
+.fa-ellipsis-v {
+  margin: 0.5rem 0.5rem 0.5rem auto;
+}
+/* messages */
+.message {
+  width: 170px;
+  border-radius: 15px;
+  padding: 0.6rem;
+  margin: 0.6rem;
+  background-color: hsl(270, 7%, 90%);
+}
+.message p {
+  color: var(--ModerateViolet);
+  font-size: 10px;
+}
+
+/* dogs images */
+.dogs-img {
+  position: relative;
+  left: 130px;
+}
+.dogs-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 8px 3px auto;
+}
+.reply p {
+  color: var(--DarkDesaturatedViolet);
+  font-size: 10px;
+}
+
+.reply {
+  width: 170px;
+  position: relative;
+  left: 130px;
+  border-radius: 15px;
+  padding: 0.6rem;
+  margin: 0.6rem;
+
+  background-color: var(--White);
+}
+.reply2 {
+  width: 100px;
+  left: 200px;
+}
+/* option */
+label {
+  display: flex;
+  width: 230px;
+  border-radius: 10px;
+  margin: 0.6rem;
+  background-image: linear-gradient(
+    to right,
+    var(--LightMagenta),
+    var(--LightViolet)
+  );
+  color: #fff;
+  align-items: center;
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-bottom-left-radius: 5px;
+}
+label h3 {
+  margin-left: auto;
+}
+label p {
+  margin-left: 1rem;
+  color: #fff;
+}
+
+.typing {
+  width: 300px;
+  background: #fff;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+}
+.typing p {
+  margin-left: 1rem;
+  color: var(--GrayishBlue);
+}
+.right-arrow {
+  height: 35px;
+  border-radius: 50%;
+  margin-right: -2px;
+  width: 35px;
+  color: #fff;
+  background-color: var(--VeryDarkDesaturatedViolet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* radio */
+#radioId {
+  display: none;
+}
+.radio {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--VeryLightMagenta);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+.radio::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--White);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.15s;
+}
+#radioId:checked + .radio::after {
+  transform: scale(1);
+}
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  .text {
+    width: auto;
+    margin: 5rem auto;
+    max-height: auto;
+    padding: 1rem;
+    line-height: 1.6;
+  }
+  .text h1 {
+    margin-bottom: 2rem;
+  }
+}
+.attribution {
+  text-align: center;
+  color: var(--DarkGrayishViolet);
+}
+a {
+  text-decoration: none;
+  color: var(--GrayishBlue);
+}
+
+.bg {
+  position: absolute;
+  top: -30px;
+  left: -120px;
+  width: 500px;
+  height: 800px;
+  border-radius: 0 0 250px 250px;
+  z-index: -9;
+  background-image: linear-gradient(
+    to bottom,
+    var(--LightMagenta),
+    var(--LightViolet)
+  );
+}
+@media (max-width: 425px) {
+  .bg {
+    left: -80%;
+    top: -150px;
+  }
+}
