@@ -37,6 +37,8 @@ body {
 h1 {
   color: var(--VeryDarkDesaturatedViolet);
   font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 1.7rem;
 }
 p {
   color: var(--DarkGrayishViolet);
@@ -57,6 +59,9 @@ main {
   justify-content: center;
   margin-left: 5rem;
   line-height: 1.5;
+}
+.text p {
+  line-height: 1.7;
 }
 /* mobile */
 .mobile {
@@ -206,7 +211,7 @@ label p {
   align-items: center;
 }
 /* radio */
-#radioId {
+.radio-input {
   display: none;
 }
 .radio {
@@ -228,7 +233,7 @@ label p {
   transform: scale(0);
   transition: 0.15s;
 }
-#radioId:checked + .radio::after {
+.radio-input:checked + .radio::after {
   transform: scale(1);
 }
 @media (max-width: 768px) {
@@ -243,10 +248,6 @@ label p {
     margin: 5rem auto;
     max-height: auto;
     padding: 1rem;
-    line-height: 1.6;
-  }
-  .text h1 {
-    margin-bottom: 2rem;
   }
 }
 .attribution {
